@@ -8,9 +8,7 @@ spec:
   parentRefs:
     - name: agora-gateway
       namespace: kgateway-system
-      sectionName: https
-  hostnames:
-    - {{ .Values.gateway.host | quote }}
+      sectionName: http
   rules:
     - matches:
         - path:
