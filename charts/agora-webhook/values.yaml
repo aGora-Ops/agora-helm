@@ -9,19 +9,9 @@ service:
   type: ClusterIP
   port: 8001
 
-ingress:
+gateway:
   enabled: true
-  className: alb
-  annotations:
-    kubernetes.io/ingress.class: alb
-    alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/healthcheck-path: /health
-  hosts:
-    - host: "webhooks.agora.example.com"
-      paths:
-        - path: /
-          pathType: Prefix
+  host: "webhooks.agora.example.com"
 
 resources:
   requests:

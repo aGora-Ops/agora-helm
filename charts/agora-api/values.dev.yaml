@@ -9,9 +9,5 @@ environment: dev
 externalSecrets:
   secretsManagerPath: agora/dev/api
 
-ingress:
-  hosts:
-    - host: "api.dev.agora.example.com"
-      paths:
-        - path: /
-          pathType: Prefix
+gateway:
+  host: "api.dev.agora.example.com"

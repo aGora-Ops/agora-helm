@@ -9,19 +9,9 @@ service:
   type: ClusterIP
   port: 8000
 
-ingress:
+gateway:
   enabled: true
-  className: alb
-  annotations:
-    kubernetes.io/ingress.class: alb
-    alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/healthcheck-path: /health
-  hosts:
-    - host: "api.agora.example.com"
-      paths:
-        - path: /
-          pathType: Prefix
+  host: "api.agora.example.com"
 
 resources:
   requests:
@@ -47,7 +37,7 @@ environment: dev
 
 env:
   AWS_REGION: "us-east-1"
-  BEDROCK_MODEL_ID: "anthropic.claude-3-5-sonnet-20241022-v2:0"
+  BEDROCK_MODEL_ID: "amazon.nova-pro-v1:0"
   COOKIE_SECURE: "true"
 
 externalSecrets:
@@ -55,14 +45,14 @@ externalSecrets:
 
 livenessProbe:
   httpGet:
-    path: /health
+    path: /health/live
     port: 8000
   initialDelaySeconds: 15
   periodSeconds: 20
 
 readinessProbe:
   httpGet:
-    path: /health
+    path: /health/ready
     port: 8000
   initialDelaySeconds: 10
   periodSeconds: 10

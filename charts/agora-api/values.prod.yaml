@@ -9,9 +9,5 @@ environment: prod
 externalSecrets:
   secretsManagerPath: agora/prod/api
 
-ingress:
-  hosts:
-    - host: "api.agora.example.com"
-      paths:
-        - path: /
-          pathType: Prefix
+gateway:
+  host: "api.agora.example.com"
