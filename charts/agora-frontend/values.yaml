@@ -36,7 +36,7 @@ environment: dev
 env:
   NEXT_PUBLIC_API_URL: ""
   NEXTAUTH_URL: "https://agora.example.com"
-  API_URL_INTERNAL: "http://agora-api:8000"
+  API_URL_INTERNAL: "http://agora-api-agora-api.agora.svc.cluster.local:8000"
 
 externalSecrets:
   secretsManagerPath: ""
