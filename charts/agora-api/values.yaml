@@ -38,7 +38,7 @@ environment: dev
 env:
   AWS_REGION: "us-east-1"
   BEDROCK_MODEL_ID: "amazon.nova-pro-v1:0"
-  COOKIE_SECURE: "true"
+  COOKIE_SECURE: "false"
 
 externalSecrets:
   secretsManagerPath: ""
