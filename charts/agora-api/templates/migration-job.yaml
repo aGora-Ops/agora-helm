@@ -1,3 +1,4 @@
+{{- if .Values.migration.enabled }}
 apiVersion: batch/v1
 kind: Job
 metadata:
@@ -41,3 +42,4 @@ spec:
             limits:
               cpu: 500m
               memory: 256Mi
+{{- end }}
