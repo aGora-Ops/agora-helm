@@ -12,10 +12,12 @@ spec:
   selector:
     matchLabels:
       {{- include "agora-worker.selectorLabels" . | nindent 6 }}
+      app.kubernetes.io/component: worker
   template:
     metadata:
       labels:
         {{- include "agora-worker.selectorLabels" . | nindent 8 }}
+        app.kubernetes.io/component: worker
     spec:
       serviceAccountName: {{ .Values.serviceAccount.name }}
       containers:
