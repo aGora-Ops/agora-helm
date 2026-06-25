@@ -1,6 +1,6 @@
 image:
   repository: "591316257673.dkr.ecr.us-east-1.amazonaws.com/agora-worker"
-  tag: "develop-e25f6cb1"
+  tag: "develop-dafe1db0"
 environment: dev
 externalSecrets:
   secretsManagerPath: agora/dev/worker
