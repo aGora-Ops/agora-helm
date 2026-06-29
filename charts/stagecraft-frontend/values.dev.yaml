@@ -1,8 +1,24 @@
-﻿image:
+image:
   repository: "591316257673.dkr.ecr.us-east-1.amazonaws.com/stagecraft-frontend"
   tag: "develop-3f24bf58"
+
+replicaCount: 1
+
+autoscaling:
+  enabled: false
+
 environment: dev
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
+
 env:
   NEXTAUTH_URL: "https://ustbiteshub.online"
+
 externalSecrets:
   secretsManagerPath: stagecraft/dev/frontend

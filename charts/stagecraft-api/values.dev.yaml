@@ -1,20 +1,31 @@
-﻿image:
+image:
   repository: "591316257673.dkr.ecr.us-east-1.amazonaws.com/stagecraft-api"
   tag: "develop-cf7a9cda"
 
 replicaCount: 1
 
+autoscaling:
+  enabled: false
+
 environment: dev
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
 
 externalSecrets:
   secretsManagerPath: stagecraft/dev/api
 
 gateway:
-  host: "api.dev.stagecraft.example.com"
+  host: "api.ustbiteshub.online"
 
 aws:
   mainAccountId: "591316257673"
   clusterName: "stagecraft-dev"
 
 migration:
-  enabled: false
+  enabled: true
