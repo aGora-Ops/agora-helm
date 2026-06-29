@@ -17,8 +17,5 @@ resources:
     cpu: 500m
     memory: 512Mi
 
-env:
-  NEXTAUTH_URL: "https://ustbiteshub.online"
-
 externalSecrets:
   secretsManagerPath: stagecraft/dev/frontend

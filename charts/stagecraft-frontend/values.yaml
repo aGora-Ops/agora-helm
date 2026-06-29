@@ -35,7 +35,6 @@ serviceAccount:
 environment: dev
 env:
   NEXT_PUBLIC_API_URL: ""
-  NEXTAUTH_URL: "https://stagecraft.example.com"
   API_URL_INTERNAL: "http://stagecraft-api-stagecraft-api.stagecraft.svc.cluster.local:8000"
 
 externalSecrets:

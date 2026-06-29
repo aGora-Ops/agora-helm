@@ -20,9 +20,6 @@ resources:
 externalSecrets:
   secretsManagerPath: stagecraft/dev/api
 
-gateway:
-  host: "api.ustbiteshub.online"
-
 aws:
   mainAccountId: "591316257673"
   clusterName: "stagecraft-dev"
