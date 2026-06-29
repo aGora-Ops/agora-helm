@@ -9,6 +9,9 @@ autoscaling:
 
 environment: dev
 
+env:
+  COOKIE_SECURE: "false"
+
 resources:
   requests:
     cpu: 100m
