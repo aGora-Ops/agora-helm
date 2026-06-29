@@ -1,6 +1,6 @@
 image:
-  repository: ""
-  tag: "develop-1b190e0d"
+  repository: "686566045205.dkr.ecr.us-east-1.amazonaws.com/stagecraft-mcp-github"
+  tag: "develop-ae62fb3a"
 
 replicaCount: 1
 
