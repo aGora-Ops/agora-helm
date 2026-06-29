@@ -1,6 +1,6 @@
 image:
   repository: "686566045205.dkr.ecr.us-east-1.amazonaws.com/stagecraft-frontend"
-  tag: "develop-20eabf6e"
+  tag: "develop-b7adc86f"
 
 replicaCount: 1
 
